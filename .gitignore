@@ -1,0 +1,10 @@
+# Visual Studio user specific files
+.vs/
+
+# Binaraies Files
+Binararies/*
+
+# Intermediate Files
+Intermediate/*
+Binaries/x64/Debug/GenesisEngine.pdb
+Binaries/x64/Debug/GenesisEngine.exe
