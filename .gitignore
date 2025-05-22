@@ -2,7 +2,7 @@
 .vs/
 
 # Binaraies Files
-Binararies/*
+Binaries/*
 
 # Intermediate Files
 Intermediate/*

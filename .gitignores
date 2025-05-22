@@ -1,8 +1,0 @@
-# Visual Studio user specific files
-.vs/
-
-# Binaraies Files
-Binaraies/*
-
-# Intermediate Files
-Intermediate/*

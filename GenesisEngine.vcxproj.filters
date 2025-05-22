@@ -30,6 +30,15 @@
     <ClCompile Include="Editor\DX3D\Sources\Private\Game\Win32\Win32Game.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\GraphicsEngine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\RenderSystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor\DX3D\Sources\Private\Core\Logger.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Editor\DX3D\Sources\Public\Core\Base.h">
@@ -45,6 +54,18 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Editor\DX3D\Sources\PCH.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\DX3D\Sources\Public\Graphics\GraphicsEngine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\DX3D\Sources\Private\Graphics\RenderSystem.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\DX3D\Sources\Public\Core\Logger.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor\DX3D\Sources\Public\Core\Common.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
