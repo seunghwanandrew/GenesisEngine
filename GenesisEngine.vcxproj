@@ -114,6 +114,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -136,13 +137,20 @@
     <ClCompile Include="Editor\DX3D\Sources\Private\Game\Win32\Win32Game.cpp" />
     <ClCompile Include="Games\main.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Windows\Win32\Window.cpp" />
+    <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\GraphicsEngine.cpp" />
+    <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\RenderSystem.cpp" />
+    <ClCompile Include="Editor\DX3D\Sources\Private\Core\Logger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Editor\DX3D\Sources\PCH.h" />
     <ClInclude Include="Editor\DX3D\Sources\Public\Core\Base.h" />
+    <ClInclude Include="Editor\DX3D\Sources\Public\Core\Common.h" />
     <ClInclude Include="Editor\DX3D\Sources\Public\Core\Core.h" />
     <ClInclude Include="Editor\DX3D\Sources\Public\Windows\Window.h" />
     <ClInclude Include="Editor\DX3D\Sources\Public\Game\Game.h" />
+    <ClInclude Include="Editor\DX3D\Sources\Public\Graphics\GraphicsEngine.h" />
+    <ClInclude Include="Editor\DX3D\Sources\Private\Graphics\RenderSystem.h" />
+    <ClInclude Include="Editor\DX3D\Sources\Public\Core\Logger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

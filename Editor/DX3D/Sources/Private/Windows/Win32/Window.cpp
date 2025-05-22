@@ -14,7 +14,8 @@ static LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT Msg, WPARAM wParam, LPAR
 	}
 }
 
-DX3D::Window::Window()
+DX3D::Window::Window(const WindowDesc& Desc)
+	: Base(Desc.Base)
 {
 	auto GenerateWindowClassFunc = []()
 		{
@@ -30,6 +31,7 @@ DX3D::Window::Window()
 
 	if (!WindowClassId)
 	{
+		GetLogger().Log(Logger::LogLevel::Error, "Fail To Register ClassEx");
 		throw std::runtime_error("Fail To Register ClassEx");
 	}
 
@@ -41,6 +43,7 @@ DX3D::Window::Window()
 
 	if (!m_Handle)
 	{
+		GetLogger().Log(Logger::LogLevel::Error, "Fail To Create WindowEx");
 		throw std::runtime_error("Fail To Create WindowEx");
 	}
 
