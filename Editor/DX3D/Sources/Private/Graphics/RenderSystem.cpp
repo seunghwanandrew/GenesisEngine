@@ -13,11 +13,8 @@ DX3D::RenderSystem::RenderSystem(const RenderSystemDesc& Desc)
 	HRESULT HitResult = D3D11CreateDevice(NULL, D3D_DRIVER_TYPE_HARDWARE, NULL, CreateDeviceFlags, NULL,
 		0, D3D11_SDK_VERSION, &m_D3DDevice, &FeatureLevel, &m_D3DDeviceContext);
 
-	if (FAILED(HitResult))
-	{
-		GetLogger().Log(Logger::LogLevel::Error, "Fail To Direct3D11 Initialization");
-		throw std::runtime_error("Fail To Direct3D11 Initialization");
-	}
+	DX3DGraphicsLogAndThrow(HitResult, Logger::LogLevel::Error, "Fail To Direct3D11 Initialization");
+
 }
 
 DX3D::RenderSystem::~RenderSystem()

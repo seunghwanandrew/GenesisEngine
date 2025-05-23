@@ -19,5 +19,22 @@ namespace DX3D
 	private:
 		LogLevel m_LogLevel = LogLevel::Error;
 	};
+
+#define DX3DLog(LogLevel, Message)\
+		{\
+			GetLogger().Log(LogLevel, Message);\
+		}
+
+#define DX3DLogAndThrow(LogLevel, Message)\
+		{\
+			DX3DLog(LogLevel, Message);\
+			throw std::runtime_error(Message);\
+		}
+
+#define DX3DGraphicsLogAndThrow(HitResult, LogLevel, Message)\
+		{\
+			HRESULT HResult = (HitResult);\
+			if (FAILED(HResult)) DX3DLogAndThrow(LogLevel, Message);\
+		}
 }
 
