@@ -31,8 +31,7 @@ DX3D::Window::Window(const WindowDesc& Desc)
 
 	if (!WindowClassId)
 	{
-		GetLogger().Log(Logger::LogLevel::Error, "Fail To Register ClassEx");
-		throw std::runtime_error("Fail To Register ClassEx");
+		DX3DLogAndThrow(Logger::LogLevel::Error, "Fail To Register ClassEx");
 	}
 
 	RECT Rec{ 0, 0, 1280, 720 };
@@ -43,8 +42,7 @@ DX3D::Window::Window(const WindowDesc& Desc)
 
 	if (!m_Handle)
 	{
-		GetLogger().Log(Logger::LogLevel::Error, "Fail To Create WindowEx");
-		throw std::runtime_error("Fail To Create WindowEx");
+		DX3DLogAndThrow(Logger::LogLevel::Error, "Fail To Create WindowEx");
 	}
 
 	ShowWindow(static_cast<HWND>(m_Handle), SW_SHOW);
