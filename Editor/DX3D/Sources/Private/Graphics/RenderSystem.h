@@ -14,7 +14,8 @@ namespace DX3D
 		std::shared_ptr<SwapChain> CreateSwapChain(const SwapChainDesc& Desc) const;
 
 	private:
-		GraphicsResourcesDesc GetGraphicsResourcesDesc() const noexcept;
+		// For Clear Definition Method Name Changed From GetGraphicsResourcesDesc() To SetGraphicsResourcesDesc()
+		GraphicsResourcesDesc SetGraphicsResourcesDesc() const noexcept;
 
 	private:
 		Microsoft::WRL::ComPtr<ID3D11Device> m_D3DDevice{};

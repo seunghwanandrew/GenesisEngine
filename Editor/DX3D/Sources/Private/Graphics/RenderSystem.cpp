@@ -15,7 +15,7 @@ DX3D::RenderSystem::RenderSystem(const RenderSystemDesc& Desc)
 		0, D3D11_SDK_VERSION, &m_D3DDevice, &FeatureLevel, &m_D3DDeviceContext);
 
 	DX3DGraphicsLogAndThrow(HitResult, Logger::LogLevel::Error, "Fail To Direct3D11 Initialization");
-
+	
 	DX3DGraphicsLogAndThrow(m_D3DDevice->QueryInterface(IID_PPV_ARGS(&m_DXGIDevice)), Logger::LogLevel::Error, "Failed To Retrieve DXGIDevice");
 
 	DX3DGraphicsLogAndThrow(m_DXGIDevice->GetParent(IID_PPV_ARGS(&m_DXGIAdapter)), Logger::LogLevel::Error, "Failed To Retrieve DXGIAdapter");
@@ -29,10 +29,10 @@ DX3D::RenderSystem::~RenderSystem()
 
 std::shared_ptr<DX3D::SwapChain> DX3D::RenderSystem::CreateSwapChain(const SwapChainDesc& Desc) const
 {	
-	return std::make_shared<SwapChain>(Desc, GetGraphicsResourcesDesc());
+	return std::make_shared<SwapChain>(Desc, SetGraphicsResourcesDesc());
 }
 
-DX3D::GraphicsResourcesDesc DX3D::RenderSystem::GetGraphicsResourcesDesc() const noexcept
+DX3D::GraphicsResourcesDesc DX3D::RenderSystem::SetGraphicsResourcesDesc() const noexcept
 {
 	return GraphicsResourcesDesc{ BaseDesc{m_Logger}, shared_from_this() ,*m_D3DDevice.Get(), *m_DXGIFactory.Get()};
 }

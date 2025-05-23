@@ -137,7 +137,7 @@
     <ClCompile Include="Editor\DX3D\Sources\Private\Game\Game.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Game\Win32\Win32Game.cpp" />
     <ClCompile Include="Games\main.cpp" />
-    <ClCompile Include="Editor\DX3D\Sources\Private\Windows\Win32\Window.cpp" />
+    <ClCompile Include="Editor\DX3D\Sources\Public\Windows\Win32\Window.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\GraphicsEngine.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\RenderSystem.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Core\Logger.cpp" />
