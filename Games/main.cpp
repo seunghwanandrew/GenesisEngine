@@ -4,7 +4,7 @@ int main()
 {
 	try
 	{
-		DX3D::Game Game({DX3D::Logger::LogLevel::Infomation});
+		DX3D::Game Game({ { 1280, 720 }, DX3D::Logger::LogLevel::Information });
 		Game.Run();
 	}
 	catch (const std::runtime_error&)

@@ -15,7 +15,7 @@ namespace DX3D
 	private:
 		std::unique_ptr<Logger> m_LoggerPtr{};
 		std::unique_ptr<GraphicsEngine> m_GraphicsEngine{};
-		std::unique_ptr<Window> m_Display{};
+		std::unique_ptr<Display> m_Display{};
 		bool m_IsRunning{ true };
 	};
 }

@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Editor\DX3D\Sources\Private\Game\Display.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Core\Base.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Game\Game.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Game\Win32\Win32Game.cpp" />
@@ -140,8 +141,12 @@
     <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\GraphicsEngine.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\RenderSystem.cpp" />
     <ClCompile Include="Editor\DX3D\Sources\Private\Core\Logger.cpp" />
+    <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\SwapChain.cpp" />
+    <ClCompile Include="Editor\DX3D\Sources\Private\Graphics\GraphicsResources.cpp" />
+    <ClCompile Include="Editor\DX3D\Sources\Private\Math\Rect.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Editor\DX3D\Sources\Public\Game\Display.h" />
     <ClInclude Include="Editor\DX3D\Sources\PCH.h" />
     <ClInclude Include="Editor\DX3D\Sources\Public\Core\Base.h" />
     <ClInclude Include="Editor\DX3D\Sources\Public\Core\Common.h" />
@@ -151,6 +156,9 @@
     <ClInclude Include="Editor\DX3D\Sources\Public\Graphics\GraphicsEngine.h" />
     <ClInclude Include="Editor\DX3D\Sources\Private\Graphics\RenderSystem.h" />
     <ClInclude Include="Editor\DX3D\Sources\Public\Core\Logger.h" />
+    <ClInclude Include="Editor\DX3D\Sources\Private\Graphics\SwapChain.h" />
+    <ClInclude Include="Editor\DX3D\Sources\Private\Graphics\GraphicsResources.h" />
+    <ClInclude Include="Editor\DX3D\Sources\Public\Math\Rect.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

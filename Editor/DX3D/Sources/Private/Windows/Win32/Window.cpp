@@ -15,7 +15,7 @@ static LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT Msg, WPARAM wParam, LPAR
 }
 
 DX3D::Window::Window(const WindowDesc& Desc)
-	: Base(Desc.Base)
+	: Base(Desc.Base), m_WindowSize(Desc.WindowSize)
 {
 	auto GenerateWindowClassFunc = []()
 		{
@@ -34,7 +34,7 @@ DX3D::Window::Window(const WindowDesc& Desc)
 		DX3DLogAndThrow(Logger::LogLevel::Error, "Fail To Register ClassEx");
 	}
 
-	RECT Rec{ 0, 0, 1280, 720 };
+	RECT Rec{ 0, 0, m_WindowSize.Width, m_WindowSize.Height };
 	AdjustWindowRect(&Rec, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, false);
 	
 	m_Handle = CreateWindowEx(NULL, MAKEINTATOM(WindowClassId), L"Genesis Game Engine", WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU,

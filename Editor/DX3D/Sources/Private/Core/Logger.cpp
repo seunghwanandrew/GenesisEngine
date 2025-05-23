@@ -19,7 +19,7 @@ void DX3D::Logger::Log(LogLevel Level, const char* Message) const
 			case DX3D::Logger::LogLevel::Warning:
 				return "Warning";
 				break;
-			case DX3D::Logger::LogLevel::Infomation:
+			case DX3D::Logger::LogLevel::Information:
 				return "Infomation";
 				break;
 			default:

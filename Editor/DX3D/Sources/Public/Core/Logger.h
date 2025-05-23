@@ -9,7 +9,7 @@ namespace DX3D
 		{
 			Error = 0,
 			Warning,
-			Infomation
+			Information
 		};
 
 		explicit Logger(LogLevel LogLevel = LogLevel::Error);
